@@ -1,8 +1,7 @@
 import MyButton from "../UI/MyButton/MyButton.jsx";
 import {useState} from "react";
 
-export default function PostItem({post}) {
-	const [postBtn, setPostBtn]= useState(true)
+export default function PostItem({post, remove}) {
 	return (
 		<section className='rounded-[18px] max-w-[360px] bg-[#232323] cursor-pointer'>
 			<div className='overflow-hidden rounded-t-[18px]'>
@@ -21,8 +20,8 @@ export default function PostItem({post}) {
 					</p>
 				</div>
 				<div className='flex gap-[10px] mt-3'>
-					<MyButton postBtn={postBtn}>Открыть</MyButton>
-					<MyButton postBtn={postBtn}>Удалить</MyButton>
+					<MyButton >Открыть</MyButton>
+					<MyButton onClick={remove} >Удалить</MyButton>
 				</div>
 			</div>
 		</section>

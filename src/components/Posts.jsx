@@ -1,7 +1,7 @@
 import MyButton from '../UI/MyButton/MyButton'
 import PostList from "./PostList.jsx";
 
-export default function Posts({ posts, modalVisible, remove }) {
+export default function Posts({ posts, modalVisible, remove, removeAll }) {
 	return (
 		<section className='mt-[50px] pb-[40px]'>
 			<div className='max-w-[1200px] my-0 mx-auto'>
@@ -13,10 +13,10 @@ export default function Posts({ posts, modalVisible, remove }) {
 						</div>
 						<div>
 							<MyButton onClick={() => modalVisible(true)}>Создать пост</MyButton>
-							<MyButton onClick={remove}>Удалить все</MyButton>
+							<MyButton onClick={removeAll}>Удалить все</MyButton>
 						</div>
 					</div>
-					<PostList posts={posts}/>
+					<PostList remove={remove} posts={posts}/>
 				</div>
 			</div>
 		</section>

@@ -16,6 +16,7 @@ function App() {
 	])
 	const [modal, setModal] = useState(false)
 
+
 	const create = newPost => {
 		setPosts([...posts, newPost])
 		setModal(false)
@@ -25,13 +26,17 @@ function App() {
 		setPosts([])
 	}
 
+	const postRemove = (post) => {
+		setPosts(posts.filter(p => p.id != post.id))
+	}
+
 	return (
 		<>
 			<MyModal visible={modal} setVisible={setModal}>
 				<FormPost create={create} />
 			</MyModal>
 			<Header />
-			<Posts modalVisible={setModal} remove={postRemoveAll} posts={posts} />
+			<Posts modalVisible={setModal} remove={postRemove} removeAll={postRemoveAll} posts={posts} />
 		</>
 	)
 }
