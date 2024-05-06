@@ -1,0 +1,18 @@
+.MyButton {
+	max-width: 150px;
+	padding: 10px 20px;
+	font-size: 15px;
+	font-weight: 700;
+	border-radius: 18px;
+	background-image: linear-gradient(to right, #e13241e2, #de848b);
+	cursor: pointer;
+	transition: 0.3s;
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.post {
+	background-image: linear-gradient(to right, rgba(182, 41, 54, 0.89), #93515f);
+
+}
