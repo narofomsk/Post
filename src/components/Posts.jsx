@@ -1,5 +1,5 @@
 import MyButton from '../UI/MyButton/MyButton'
-import PostList from "./PostList.jsx";
+import PostList from './PostList.jsx'
 
 export default function Posts({ posts, modalVisible, remove, removeAll }) {
 	return (
@@ -11,12 +11,14 @@ export default function Posts({ posts, modalVisible, remove, removeAll }) {
 							<MyButton>По названию</MyButton>
 							<MyButton>По описанию</MyButton>
 						</div>
-						<div>
-							<MyButton onClick={() => modalVisible(true)}>Создать пост</MyButton>
+						<div className='flex gap-[20px]'>
+							<MyButton onClick={() => modalVisible(true)}>
+								Создать пост
+							</MyButton>
 							<MyButton onClick={removeAll}>Удалить все</MyButton>
 						</div>
 					</div>
-					<PostList remove={remove} posts={posts}/>
+					<PostList remove={remove} posts={posts} />
 				</div>
 			</div>
 		</section>

@@ -1,7 +1,6 @@
-import MyButton from "../UI/MyButton/MyButton.jsx";
-import {useState} from "react";
+import MyButton from '../UI/MyButton/MyButton.jsx'
 
-export default function PostItem({post, remove}) {
+export default function PostItem({ post, remove }) {
 	return (
 		<section className='rounded-[18px] max-w-[360px] bg-[#232323] cursor-pointer'>
 			<div className='overflow-hidden rounded-t-[18px]'>
@@ -19,9 +18,9 @@ export default function PostItem({post, remove}) {
 						{post.body}
 					</p>
 				</div>
-				<div className='flex gap-[10px] mt-3'>
-					<MyButton >Открыть</MyButton>
-					<MyButton onClick={remove} >Удалить</MyButton>
+				<div className='flex justify-between mt-3'>
+					<MyButton>Открыть</MyButton>
+					<MyButton onClick={remove}>Удалить</MyButton>
 				</div>
 			</div>
 		</section>
