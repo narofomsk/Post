@@ -2,7 +2,7 @@ import React from 'react'
 import MyProfile from '../UI/MyProfile/MyProfile'
 import MySearch from '../UI/MySearch/MySearch'
 
-export default function Header() {
+export default function Header({ filter, setFilter }) {
 	return (
 		<header>
 			<div className='mx-w-[1300px] my-0 mx-auto'>
@@ -10,7 +10,7 @@ export default function Header() {
 					<div className='text-[26px] font-bold'>
 						<a href=''>Logo</a>
 					</div>
-					<MySearch />
+					<MySearch filter={filter} setFilter={setFilter} />
 					<MyProfile />
 				</div>
 			</div>
